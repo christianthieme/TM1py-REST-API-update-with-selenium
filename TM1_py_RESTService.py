@@ -22,15 +22,12 @@
     #        token = 'Basic ' + b64encode(
     #            str.encode("{}:{}".format(user, password))).decode("ascii")
 
-    #;For Production:
-    #ClientCAMURI=http://C10PROD.MICRON.COM/ibmcognos/cgi-bin/cognosisapi.dll
-	#For Test:
-	#ClientCAMURI=http://C10TEST.MICRON.COM/ibmcognos/cgi-bin/cognosisapi.dll
+
         chrome_options = Options()
         chrome_options.add_argument("--headless")
         chrome_options.add_argument("--window-size=1920x1080")
-        driver = webdriver.Chrome(chrome_options = chrome_options, executable_path = r'C:\Users\cthieme\Documents\JUNK\Python Stuff\chromedriver.exe')
-        driver.get('http://c10prod.micron.com/ibmcognos/cgi-bin/cognosisapi.dll')
+        driver = webdriver.Chrome(chrome_options = chrome_options, executable_path = r'C:\Users\Stuff\chromedriver.exe')
+        driver.get('http://company.com/ibmcognos/cgi-bin/cognosisapi.dll')
         cookie_dictionary = driver.get_cookie('cam_passport')
         cookie = cookie_dictionary['value']
         driver.close()
