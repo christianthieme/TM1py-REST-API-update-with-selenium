@@ -1,0 +1,2 @@
+# TM1py-REST-API-update-with-selenium
+This was a project I completed while I was attempting to connect to the TM1 Rest API. The company I work for had a software sitting on top of the server I was trying to contact that would block all API calls. To get around this, I used the web driver Selenium to impersonate myself opening a web browser, and then collecting the cookie (a token) to pass back to the TM1 server to authenticate. 
